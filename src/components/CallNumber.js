@@ -14,7 +14,7 @@ const CallNumber = () => {
   } = useContext(BingoContext)
 
   const getNumber = () => {
-    if (turns > 0) {
+    if (turns >= 0) {
       let num = Math.floor(Math.random() * 75) + 1
 
       while (called.indexOf(num) !== -1 && called.length < 75) {
@@ -32,7 +32,7 @@ const CallNumber = () => {
 
   return (
     <div style={{ textAlign: "center" }}>
-      <h3>Turns left: {turns}</h3>
+      <h3>Turns left: {turns >= 0 ? turns : 0}</h3>
       <DisplayElement>
         {turns >= 0 ? createDisplay(current) : "GAME OVER"}
       </DisplayElement>

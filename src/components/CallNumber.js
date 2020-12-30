@@ -24,6 +24,8 @@ const CallNumber = () => {
       setCurrent(num)
       setCalled((prev) => [...prev, num])
       setTurns((prev) => prev - 1)
+    } else {
+      window.location.reload()
     }
   }
 
@@ -36,7 +38,7 @@ const CallNumber = () => {
       <DisplayElement>
         {turns >= 0 ? createDisplay(current) : "GAME OVER"}
       </DisplayElement>
-      <Button onClick={getNumber}>NEXT</Button>
+      <Button onClick={getNumber}>{turns >= 0 ? "next" : "try again"}</Button>
     </div>
   )
 }

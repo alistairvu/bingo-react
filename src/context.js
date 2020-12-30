@@ -8,6 +8,7 @@ const BingoProvider = ({ children }) => {
   const [marked, setMarked] = useState(createMarked)
   const [called, setCalled] = useState([])
   const [current, setCurrent] = useState(0)
+  const [turns, setTurns] = useState(40)
 
   // Initialise the board
   useEffect(() => setBoard(createBoard()), [])
@@ -22,6 +23,8 @@ const BingoProvider = ({ children }) => {
         setCalled,
         current,
         setCurrent,
+        turns,
+        setTurns,
       }}
     >
       {children}

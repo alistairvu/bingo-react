@@ -60,12 +60,12 @@ export const Button = styled.button`
 `
 
 export const AppContainer = styled.div`
-  margin-top: 10vh;
+  margin-top: 5vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 10vh;
+  padding-bottom: 5vh;
 `
 
 export const DisplayElement = styled.h1`
